@@ -67,11 +67,11 @@ export interface ILocalizeResultEvent {
 }
 
 export const DEFAULT_ENDPOINTS: IMultisetSdkEndpoints = {
-  authUrl: 'https://dev-api.multiset.ai/v1/m2m/token',
-  queryUrl: 'https://dev-api.multiset.ai/v1/vps/map/query-form',
-  mapDetailsUrl: 'https://dev-api.multiset.ai/v1/vps/map/',
-  mapSetDetailsUrl: 'https://dev-api.multiset.ai/v1/vps/map-set/',
-  fileDownloadUrl: 'https://dev-api.multiset.ai/v1/file',
+  authUrl: 'https://api.multiset.ai/v1/m2m/token',
+  queryUrl: 'https://api.multiset.ai/v1/vps/map/query-form',
+  mapDetailsUrl: 'https://api.multiset.ai/v1/vps/map/',
+  mapSetDetailsUrl: 'https://api.multiset.ai/v1/vps/map-set/',
+  fileDownloadUrl: 'https://api.multiset.ai/v1/file',
 };
 
 /**
