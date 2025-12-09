@@ -1,6 +1,6 @@
 {
   "name": "@multiset-ai/vps",
-  "version": "1.0.3",
+  "version": "1.0.1",
   "description": "Multiset VPS WebXR SDK - Core client and WebXR controller.",
   "type": "module",
   "main": "dist/index.js",
