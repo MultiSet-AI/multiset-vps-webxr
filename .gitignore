@@ -16,6 +16,10 @@ build/
 .env.local
 .env.*.local
 
+# npm configuration (may contain tokens)
+.npmrc
+.npmrc.github
+
 # IDE and editor files
 .vscode/
 .idea/

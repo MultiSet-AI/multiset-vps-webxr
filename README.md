@@ -4,8 +4,8 @@ Multiset VPS WebXR is a TypeScript SDK that enables developers to integrate Mult
 
 ## Features
 
-- **Core Client** (`multiset-vps-webxr/core`) - Authentication and API client for Multiset VPS services
-- **WebXR Controller** (`multiset-vps-webxr/webxr`) - Three.js WebXR session management and frame capture
+- **Core Client** (`@multiset-ai/vps/core`) - Authentication and API client for Multiset VPS services
+- **WebXR Controller** (`@multiset-ai/vps/webxr`) - Three.js WebXR session management and frame capture
 - **Framework-agnostic** - Works with React, Vue, Angular, or vanilla JavaScript
 - **TypeScript support** - Full type definitions included
 - **Event-driven architecture** - Comprehensive callbacks for all operations
@@ -15,7 +15,7 @@ Multiset VPS WebXR is a TypeScript SDK that enables developers to integrate Mult
 ## Installation
 
 ```bash
-npm install multiset-vps-webxr three
+npm install @multiset-ai/vps three
 ```
 
 > **Note**: `three` is a peer dependency and must be installed separately.
@@ -39,8 +39,8 @@ npm install multiset-vps-webxr three
 ### 1. Import the SDK
 
 ```typescript
-import { MultisetClient, DEFAULT_ENDPOINTS } from 'multiset-vps-webxr/core';
-import { WebxrController } from 'multiset-vps-webxr/webxr';
+import { MultisetClient, DEFAULT_ENDPOINTS } from '@multiset-ai/vps/core';
+import { WebxrController } from '@multiset-ai/vps/webxr';
 ```
 
 ### 2. Create and authorize the client
@@ -247,12 +247,12 @@ import type {
   IPoseResultEvent,
   ILocalizeAndMapDetails,
   MapType,
-} from 'multiset-vps-webxr/core';
+} from '@multiset-ai/vps/core';
 
 // WebXR types
 import type {
   IWebxrControllerOptions,
-} from 'multiset-vps-webxr/webxr';
+} from '@multiset-ai/vps/webxr';
 ```
 
 ## Examples
@@ -261,8 +261,8 @@ import type {
 
 ```javascript
 import * as THREE from 'three';
-import { MultisetClient, DEFAULT_ENDPOINTS } from 'multiset-vps-webxr/core';
-import { WebxrController } from 'multiset-vps-webxr/webxr';
+import { MultisetClient, DEFAULT_ENDPOINTS } from '@multiset-ai/vps/core';
+import { WebxrController } from '@multiset-ai/vps/webxr';
 
 const client = new MultisetClient({
   clientId: 'your-client-id',
@@ -307,8 +307,8 @@ if (result?.localizeData?.poseFound) {
 ```tsx
 import { useEffect, useRef, useState } from 'react';
 import * as THREE from 'three';
-import { MultisetClient, DEFAULT_ENDPOINTS } from 'multiset-vps-webxr/core';
-import { WebxrController } from 'multiset-vps-webxr/webxr';
+import { MultisetClient, DEFAULT_ENDPOINTS } from '@multiset-ai/vps/core';
+import { WebxrController } from '@multiset-ai/vps/webxr';
 
 export default function App() {
   const [authorized, setAuthorized] = useState(false);

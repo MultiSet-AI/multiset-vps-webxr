@@ -8,7 +8,7 @@ export default defineConfig({
   },
   clean: true,
   dts: true,
-  format: ['esm', 'cjs'],
+  format: ['esm'], // or ['esm', 'cjs'] if you want CJS support
   splitting: false,
   sourcemap: true,
   target: 'es2019',
@@ -16,4 +16,3 @@ export default defineConfig({
   external: ['three'],
   treeshake: true,
 });
-
