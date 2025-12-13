@@ -1,16 +1,16 @@
-# Multiset VPS WebXR
+# MultiSet VPS WebXR
 
-Multiset VPS WebXR is a TypeScript SDK that enables developers to integrate Multiset's Visual Positioning System (VPS) capabilities into WebXR applications. It provides precise 6-DOF (6 degrees of freedom) localization by matching camera frames against cloud-hosted maps, allowing AR applications to understand their position and orientation in physical space.
+MultiSet VPS WebXR is a TypeScript SDK that enables developers to integrate MultiSet's Visual Positioning System (VPS) capabilities into WebXR applications. It provides precise 6-DOF (6 degrees of freedom) localization by matching camera frames against cloud-hosted maps, allowing AR applications to understand their position and orientation in physical space.
 
 ## Features
 
-- **Core Client** (`@multisetai/vps/core`) - Authentication and API client for Multiset VPS services
+- **Core Client** (`@multisetai/vps/core`) - Authentication and API client for MultiSet VPS services
 - **WebXR Controller** (`@multisetai/vps/webxr`) - Three.js WebXR session management and frame capture
 - **Framework-agnostic** - Works with React, Vue, Angular, or vanilla JavaScript
 - **TypeScript support** - Full type definitions included
 - **Event-driven architecture** - Comprehensive callbacks for all operations
 - **Precise localization** - 6-DOF pose estimation with position and rotation
-- **Cloud-based mapping** - Leverages Multiset's cloud infrastructure for map storage and matching
+- **Cloud-based mapping** - Leverages MultiSet's cloud infrastructure for map storage and matching
 
 ## Installation
 
@@ -47,9 +47,9 @@ import { WebxrController } from '@multisetai/vps/webxr';
 
 ```typescript
 const client = new MultisetClient({
-  clientId: 'your-client-id',
-  clientSecret: 'your-client-secret',
-  code: 'MAP_YOUR_MAP_CODE',
+  clientId: 'CLIENT_ID',
+  clientSecret: 'CLIENT_SECRET',
+  code: 'MAP_OUR_MAPSET_CODE',
   mapType: 'map', // or 'map-set'
   endpoints: DEFAULT_ENDPOINTS,
   onAuthorize: (token) => console.log('Authorized:', token),
@@ -87,7 +87,7 @@ if (result?.localizeData?.poseFound) {
 
 ### `MultisetClient`
 
-The core client handles authentication and API interactions with Multiset services.
+The core client handles authentication and API interactions with MultiSet services.
 
 #### Constructor
 
@@ -99,8 +99,8 @@ new MultisetClient(config: IMultisetSdkConfig)
 
 ```typescript
 interface IMultisetSdkConfig {
-  clientId: string;                    // Your Multiset client ID
-  clientSecret: string;                // Your Multiset client secret
+  clientId: string;                    // Your MultiSet client ID
+  clientSecret: string;                // Your MultiSet client secret
   code: string;                        // Map code (e.g., 'MAP_XXXXX')
   mapType: 'map' | 'map-set';         // Type of map to use
   endpoints?: Partial<IMultisetSdkEndpoints>; // Optional custom endpoints
@@ -116,7 +116,7 @@ interface IMultisetSdkConfig {
 
 ##### `authorize(): Promise<string>`
 
-Authenticates with Multiset services and obtains an access token. Must be called before making any API requests.
+Authenticates with MultiSet services and obtains an access token. Must be called before making any API requests.
 
 ```typescript
 const token = await client.authorize();
@@ -257,6 +257,12 @@ import type {
 
 ## Examples
 
+> **Full working examples**: This repository includes complete, runnable example applications in the [`examples/`](./examples) directory:
+> - **[React Example](./examples/react)** - Full React implementation with TypeScript
+> - **[Vanilla JavaScript Example](./examples/vanilla)** - Vanilla JavaScript implementation
+>
+> Each example includes setup instructions, configuration, and demonstrates the complete SDK integration workflow.
+
 ### Vanilla JavaScript
 
 ```javascript
@@ -265,9 +271,9 @@ import { MultisetClient, DEFAULT_ENDPOINTS } from '@multisetai/vps/core';
 import { WebxrController } from '@multisetai/vps/webxr';
 
 const client = new MultisetClient({
-  clientId: 'your-client-id',
-  clientSecret: 'your-client-secret',
-  code: 'MAP_YOUR_MAP_CODE',
+  clientId: 'CLIENT_ID',
+  clientSecret: 'CLIENT_SECRET',
+  code: 'MAP_OR_MAPSET_CODE',
   mapType: 'map',
   endpoints: DEFAULT_ENDPOINTS,
   onAuthorize: (token) => console.log('Authorized:', token),
@@ -318,9 +324,9 @@ export default function App() {
 
   useEffect(() => {
     clientRef.current = new MultisetClient({
-      clientId: 'your-client-id',
-      clientSecret: 'your-client-secret',
-      code: 'MAP_YOUR_MAP_CODE',
+      clientId: 'CLIENT_ID',
+      clientSecret: 'CLIENT_SECRET',
+      code: 'MAP_OR_MAPSET_CODE',
       mapType: 'map',
       endpoints: DEFAULT_ENDPOINTS,
     });

@@ -20,7 +20,7 @@ export interface ILocalizeResponse {
   retrieval_scores: number[];
   num_matches: number[];
   confidence: number;
-  retreived_imgs: string[];
+  retrieved_imgs: string[];
   mapIds: string[];
 }
 
