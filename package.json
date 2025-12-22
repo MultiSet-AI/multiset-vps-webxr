@@ -1,6 +1,6 @@
 {
   "name": "@multisetai/vps",
-  "version": "1.0.5",
+  "version": "1.0.4",
   "description": "Multiset VPS WebXR SDK - Core client and WebXR controller.",
   "type": "module",
   "main": "dist/index.js",
